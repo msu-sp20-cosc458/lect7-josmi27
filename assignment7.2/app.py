@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello Joshua'
+    return os.getenv("T_Api_Key")
 
 app.run(
 host=os.getenv('IP', '0.0.0.0'),
